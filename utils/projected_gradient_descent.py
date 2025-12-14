@@ -14,7 +14,3 @@ def projected_gradient_descent(sigma, lamb, mu, w0, step_size, max_iter = 1000):
         f_value = 0.5 * w.T @ sigma @ w - lamb * w.T @ mu
         f_values.append(f_value)
     return w, f_values
-        f_value  = 0.5 * w.T @ sigma @ w - lamb * w.T @ mu
-        f_values.append(f_value)
-
-    return w, f_values
