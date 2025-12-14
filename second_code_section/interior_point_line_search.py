@@ -107,7 +107,7 @@ def backtracking_line_search(y, dy, c, A, Sigma, mu, t, lam, wprev, c_l1, obj, e
         return 0.1  # Fallback small step
 
 def newton_step(y, c, A, Sigma, mu, t, lam, wprev, c_l1, obj, eta):
-    g = -obj + eta * G_grad(y, c, A, Sigma, mu, t, lam, wprev, c_l1)
+    g = -t + eta * G_grad(y, c, A, Sigma, mu, t, lam, wprev, c_l1)
     H = eta * G_hess(y, c, A, Sigma, mu, t, lam, wprev, c_l1)
     
     # Add small regularization for numerical stability
