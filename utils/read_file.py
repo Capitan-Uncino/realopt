@@ -9,8 +9,6 @@ data["return"] = (data["close"] - data["prev_close"]) / data["prev_close"]
 
 returns = data.pivot(index="date", columns="Name", values="return")   # it contains the returns per day of each asset
 
-returns = returns.dropna()
-
 #mean return
 mu = returns.mean()
 print(mu)
